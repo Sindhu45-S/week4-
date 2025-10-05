@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
+
+*{
+    font-family: "Dosis", sans-serif;
+}
+
+body{
+    min-height: 75rem;
+    padding-top: 4.5rem;
+}
+
+.card-img-top{
+    width: 100%;
+    height: 25rem;
+    object-fit: cover;
+}
+
+/* ------------------ Animated Gradient Header ------------------ */
+.animated-header {
+  background: linear-gradient(-45deg, #0a0a0a, #001f4d, #000814, #003566);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+  padding: 0.6rem 1rem;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  z-index: 9999;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ------------------ Navbar Links Hover ------------------ */
+.navbar-nav .nav-link {
+  transition: all 0.3s ease;
+  color: #ffffff;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #00bfff;
+  transform: scale(1.05);
+}
+
+/* ------------------ Search Input ------------------ */
+.animated-search {
+  padding: 0.35rem 0.75rem;
+  border-radius: 50px;
+  border: none;
+  background-color: rgba(131, 193, 244, 0.638);
+  color: #fff;
+  width: 180px;
+  transition: all 0.4s ease;
+}
+
+/* Expand input when active (typing) */
+.animated-search.active {
+  width: 280px;
+  background-color: rgba(248, 248, 248, 0.693);
+  box-shadow: 0 0 10px rgba(0,191,255,0.5);
+}
+
+/* Focus effect */
+.animated-search:focus {
+  outline: none;
+  width: 280px;
+  background-color: rgba(131, 219, 248, 0.479);
+  box-shadow: 0 0 10px rgba(0,191,255,0.5);
+  transition: all 0.3s ease;
+}
+
+/* ------------------ Search Button ------------------ */
+.animated-btn {
+  padding: 0.35rem 0.9rem;
+  border-radius: 50px;
+  border: 1px solid #00bfff;
+  color: #00bfff;
+  transition: all 0.3s ease;
+}
+
+.animated-btn:hover {
+  background-color: #00bfff;
+  color: #000;
+  transform: scale(1.1);
+}
+
+/* ------------------ Clear × Button ------------------ */
+.position-relative .clear-btn {
+  position: absolute;
+  right: 60px; /* adjust depending on search button */
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  font-size: 1.2rem;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: all 0.2s ease;
+}
+
+.position-relative .clear-btn:hover {
+  opacity: 1;
+  color: #00bfff;
+}
+
+/* Card with header-like shimmer black-blue gradient */
+.card-header-style {
+  background: linear-gradient(-45deg, #0a0a0a, #001f4d, #000814, #003566);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+  color: #fff;
+  border: none;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-header-style:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.7);
+}
+
+/* Use same gradient animation as header */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Optional: Card text styling */
+.card-header-style .card-title {
+  color: #00bfff;
+}
+
+.card-header-style .card-text {
+  color: #f5f5f5;
+}
+.card-header-style {
+  width: 250px;          /* fixed width */
+  height: 400px;         /* fixed height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* keep content spaced */
+  background: linear-gradient(-45deg, #0a0a0a, #001f4d, #000814, #003566);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+  color: #fff;
+  border: none;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-header-style:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.7);
+}
+
+/* Make image fit nicely inside card */
+.card-header-style img {
+  width: 100%;
+  height: 180px;        /* fixed image height */
+  object-fit: cover;    /* crop/fit image without distortion */
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+}
+
+/* Ensure text section doesn't overflow */
+.card-body {
+  overflow: hidden;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-body .card-title {
+  color: #00bfff;
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-body .card-text {
+  font-size: 0.8rem;
+  color: #f5f5f5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* show max 3 lines */
+  -webkit-box-orient: vertical;
+}
+.welcome-box {
+  background-color: #2a6570e8;  /* light gray */
+  border-radius: 15px;        /* curved corners */
+  border: 1px solid #c9bdbd;  /* subtle border */
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(127, 123, 123, 0.737);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.welcome-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(75, 81, 197, 0.855);
+}
